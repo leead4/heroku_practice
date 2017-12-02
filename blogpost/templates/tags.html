@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Blogazon</title>
+	{%include "styles.html"%}
+</head>
+<body>
+	{%include "navbar.html"%}
+	
+	<div class="container-fluid">
+		<div class="row">
+			{% for blog in blogs %}
+				<div class="col-md-12">
+					<div class="card-container text-center">
+						<div class="row content-holder body_text">
+							<div class="col-md-12">
+							<article class="post">
+							<h4>{{blog.title}}</h4>
+							<h4>{{blog.content}}</h4>
+
+								</article>
+							</div>
+							
+						</div>
+
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+	<!-- scripts -->
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/javascripts.js"></script>
+</body>
+</html> 
+
+

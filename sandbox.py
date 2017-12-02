@@ -1,0 +1,24 @@
+// {
+   //    "model":"blogpost.PostTag",
+   //    "pk":1,
+   //    "fields":{
+   //       "post":1,
+   //       "tag":1
+   //    }
+   // },
+   // {
+   //    "model":"blogpost.PostTag",
+   //    "pk":2,
+   //    "fields":{
+   //       "post":2,
+   //       "tag":2
+   //    }
+   // },
+   // {
+   //    "model":"blogpost.PostTag",
+   //    "pk":3,
+   //    "fields":{
+   //       "post":3,
+   //       "tag":3
+   //    }
+   // },
