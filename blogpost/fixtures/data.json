@@ -4,35 +4,21 @@
       "model":"blogpost.Tags",
       "pk":1,
       "fields":{
-         "topic":"Illustration"
+         "topic":"Code"
       }
    },
    {
       "model":"blogpost.Tags",
       "pk":2,
       "fields":{
-         "topic":"Photos"
+         "topic":"Design"
       }
    },
    {
       "model":"blogpost.Tags",
       "pk":3,
       "fields":{
-         "topic":"Animation"
-      }
-   },
-   {
-      "model":"blogpost.Tags",
-      "pk":4,
-      "fields":{
-         "topic":"Story"
-      }
-   },
-   {
-      "model":"blogpost.Tags",
-      "pk":5,
-      "fields":{
-         "topic":"Project"
+         "topic":"Cats"
       }
    },
    {
@@ -168,7 +154,7 @@
          "post_like":20,
          "post_type":"second",
          "date":"2016-03-11",
-         "tags": [1],
+         "tags": [2],
          "post_author":2
       }
    },
@@ -181,7 +167,7 @@
          "post_like":30,
          "post_type":"third",
          "date":"2017-03-11",
-         "tags": [1],
+         "tags": [3],
          "post_author":3
       }
    }

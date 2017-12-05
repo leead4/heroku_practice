@@ -1,20 +1,9 @@
 <nav class="navbar navbar-default navbar-fixed-top transparent navtown">
   <div class="container-fluid center">
         <ul class="nav navbar-nav smooth">
-          <li id="findme" class="search">
-            <form  action="{% url 'search_keywords' %}" type="get" accept-charset="utf-8" class="navbar-form search">
-              <span id="searchIcon" class="glyphicon glyphicon-search" ></span>
-                <input id="search_input" value="{{request.GET.search}}" type="text" class="form-control" name="Search" placeholder="Search"> 
-            </form>
-          </li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'archive' %}">Archive</a></li>
-          <li><a href="{% url 'popular' %}">Popular</a></li>
-          <li><a href="{% url 'get_tags' %}">Tags</a></li>
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'topic' %}">Topic</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-     
+          <li><a href="{% url 'index' %}">Home /</a></li>
+          <li><a href="{% url 'blog' %}">Blog /</a></li>
+          <li><a href="{% url 'projects' %}">Projects /</a></li>
+      </ul>
     </div>
 </nav>

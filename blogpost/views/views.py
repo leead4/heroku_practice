@@ -28,24 +28,9 @@ def search_keywords(request):
 
     form_data = request.GET
     iterable_form_data = form_data.dict()
-    
     search_box = iterable_form_data['Search']
-    print("search_box", search_box)
-    
-
     posts_head = Post.objects.filter(content__text__contains=search_box)
-    
-    print_me = list(posts_head)
-    print("hello", print_me)
-
-
-    for head in print_me:
-        print("head", type(head))
-
-    print("post", posts_head)
-
     template_name = 'search_keywords.html'
-
     return render(request, template_name, {'blogs': posts_head})
 
 def popular(request):
@@ -60,12 +45,41 @@ def get_tags(request):
     # print(blogs)
     return render(request, template_name, {'blogs': blogs})
 
-def topic(request):
-    topic ="Illustration"
-    blogs = Post.objects.order_by('date')[:5]
+def topic_code(request):
+    topic ="Code"
+    blogs = Post.objects.filter(tags__topic = "Code")
     template_name = 'topic.html'
     print(blogs)
     return render(request, template_name, {'blogs': blogs, 'topic': topic})
+
+def topic_design(request):
+    topic ="Design"
+    blogs = Post.objects.filter(tags__topic = "Design")
+    template_name = 'topic.html'
+    print(blogs)
+    return render(request, template_name, {'blogs': blogs, 'topic': topic})
+
+def topic_cats(request):
+    topic ="Cats"
+    blogs = Post.objects.filter(tags__topic = "Cats")
+    template_name = 'topic.html'
+    print(blogs)
+    return render(request, template_name, {'blogs': blogs, 'topic': topic})    
+
+def blog(request):
+    blogs = Post.objects.order_by('date')[:5]
+    template_name = 'blogs.html'
+    return render(request, template_name, {'blogs': blogs})    
+
+
+def projects(request):
+    template_name = 'projects.html'
+    return render(request, template_name)    
+
+def get_this_post(request, blog_id):
+    template_name = 'post.html'
+    post = Post.objects.get(pk= blog_id)
+    return render(request, template_name, {'post': post})
 
 # def like_this_post(request):
 

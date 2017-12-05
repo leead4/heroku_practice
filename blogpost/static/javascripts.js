@@ -1,15 +1,12 @@
-
-
-var $search = $('span'),
+var $search = $('#searchIcon'),
     $input   = $('#search_input'),
     visible = false,
     $nav = $('nav ul');
+    $side = $('#mySidenav');
+    $open = $('#open');
+    $close = $('#close');
 
- 	$('#search_input').hide();
-
-// $(document).load(function(){
-// 	console.log("helloooo");
-// });
+ $('#search_input').hide();
 
 $search.hover(
 	function(){
@@ -18,16 +15,12 @@ $search.hover(
 			console.log("im true!");
 			$input.on("focus", function(){
 				console.log("im a focus");
-				// $(this).css("background-color", "pink");
 			}).mouseleave(function(){
 				$(this).fadeOut('slow', function(){
 					console.log("im a mouseout");
 				});
-				// $nav.addClass('smooth');
-				// $()
 			});
 			visible = false;
-		
 		} else {
 			console.log("helloooo it's false");
 			$input.show(300, function(){
@@ -37,11 +30,21 @@ $search.hover(
 			});
 			console.log("we skipped stuff");
 			visible = true;
-			
 		}
-
 });
 
+$open.click(
+	function openNav() {
+		console.log("whats up");
+		$side.css("width", "250px");
+	}
+);
+
+$close.click(
+	function closeNav(){
+		console.log("whats up bra");
+		$side.css("width", "0");
+	});
 
 
 
