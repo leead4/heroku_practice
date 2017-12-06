@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Blogazon</title>
+	{%include "styles.html"%}
+</head>
+<body>
+	{%include "navbar.html"%}
+	<div class="container-fluid main">
+	{%include "sidenav.html"%}
+	{% for blog in blogs %}
+		<div class="row content-holder body_text">
+			<div class="col-md-12">
+				<section class="blank-space"></section>
+				<article class="post asymmetric">
+					<h4><a href="{% url 'get_this_post' blog.id %}">{{blog.title}}</a></h4>
+
+					<!-- <h4>{{blog.text_body}}</h4> -->
+					<h4>{{blog.date}}</h4>
+					<!-- <h4>{{blog.tags.post_topic}}</h4> -->
+					<h4>{{blog.post_author.name}}</h4>
+				</article>
+				<section class="blank-space"></section>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+	{%include "scripts.html"%}
+</body>
+</html> 

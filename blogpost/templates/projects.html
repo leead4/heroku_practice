@@ -1,0 +1,44 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	{%include "styles.html"%}
+	<title>Blogazon
+	</title>
+</head>
+<body>
+	{%include "navbar.html"%}
+<div class="container">
+	<div class="row">
+		<section class="blank-space"></section>
+			<div class="asymmetric text-center">
+				<h4>Here are some things I've worked on</h4>
+			</div>
+		<!-- <section class="blank-space"></section> -->
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<section class="blank-space"></section>
+				<article class="post text-center asymmetric">
+					<h5>ElkLodge
+					<a href="https://github.com/leead4/spa-project"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</h5>
+					<h5>NSS D18-website<a href="https://nss-cohort18.github.io/#!/cohort-18"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</h5>
+					<h5>Sprinkler Garden App<a href="https://capstonecalc.firebaseapp.com"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</h5>
+
+					<h5>Flashcard Generator App<a href="https://github.com/leead4/FlashCards"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+					</h5>
+				</article>
+			<section class="blank-space"></section>
+		</div>
+	</div>
+</div>
+	<br>
+	{%include "scripts.html"%}
+</body>
+</html> 
+
+

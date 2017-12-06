@@ -22,90 +22,52 @@
       }
    },
    {
-      "model":"blogpost.Animation",
-      "pk":1,
-      "fields":{
-         "style":"background-color: white;"
-      }
-   },
-   {
-      "model":"blogpost.Animation",
-      "pk":2,
-      "fields":{
-         "style":"background-color: pink;"
-      }
-   },
-   {
-      "model":"blogpost.Animation",
-      "pk":3,
-      "fields":{
-         "style":"background-color: yellow;"
-      }
-   },
-   {
-      "model":"blogpost.Animation",
-      "pk":4,
-      "fields":{
-         "style":"background-color: purple;"
-      }
-   },
-   {
       "model":"blogpost.Content",
       "pk":1,
       "fields":{
-         "text":"Not everything that can be counted counts, and not everything that counts can be counted.",
-         "asset": [2]
+         "text":"Not everything that can be counted counts, and not everything that counts can be counted."
       }
    },
    {
       "model":"blogpost.Content",
       "pk":2,
       "fields":{
-         "text":"The artist is nothing without the gift, but the gift is nothing without work.",
-         "asset": [1]
+         "text":"The artist is nothing without the gift, but the gift is nothing without work."
       }
    },
    {
       "model":"blogpost.Content",
       "pk":3,
       "fields":{
-         "text":"In the End, we will remember not the words of our enemies, but the silence of our friends.",
-         "asset": [2]
+         "text":"In the End, we will remember not the words of our enemies, but the silence of our friends."
       }
    },
    {
       "model":"blogpost.Content",
       "pk":4,
       "fields":{
-         "text":"The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense",
-         "asset": [1]
+         "text":"The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense"
       }
    },
    {
       "model":"blogpost.Asset",
       "pk":1,
       "fields":{
-         "file_path":"",
-         "animation":1,
-         "image_data":""
+         "image":""
       }
    },
    {
       "model":"blogpost.Asset",
       "pk":2,
       "fields":{
-         "file_path":"",
-         "animation":2,
-         "image_data":""
+         "image":""
       }
    },
    {
       "model":"blogpost.Asset",
       "pk":3,
       "fields":{
-         "file_path":"",
-         "animation":3,
-         "image_data":""
+         "image":""
       }
    },
    {
@@ -137,9 +99,9 @@
       "pk":1,
       "fields":{
          "content":1,
+         "asset":1, 
          "title":"Im the first Post",
          "post_like":10,
-         "post_type":"first",
          "date":"2015-03-11",
          "tags":[1],
          "post_author":1
@@ -150,9 +112,9 @@
       "pk":2,
       "fields":{
          "content":2,
+         "asset":2, 
          "title":"I'm the second post",
          "post_like":20,
-         "post_type":"second",
          "date":"2016-03-11",
          "tags": [2],
          "post_author":2
@@ -163,9 +125,9 @@
       "pk":3,
       "fields":{
          "content":3,
+         "asset":3, 
          "title":"I'm the third post",
          "post_like":30,
-         "post_type":"third",
          "date":"2017-03-11",
          "tags": [3],
          "post_author":3
