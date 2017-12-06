@@ -45,6 +45,14 @@ def get_tags(request):
     # print(blogs)
     return render(request, template_name, {'blogs': blogs})
 
+
+def filter_blog_by_topic(request, topic):
+    topic = topic
+    blogs = Post.objects.filter(tags__topic = topic)
+    template_name = 'topic.html'
+    print(blogs)
+    return render(request, template, {'blogs': blogs, 'topic': topic})
+
 def topic_code(request):
     topic ="Code"
     blogs = Post.objects.filter(tags__topic = "Code")

@@ -1,3 +1,6 @@
+from django.conf.urls.static import static
+from django.conf import settings
+
 """blog URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -38,8 +41,9 @@ urlpatterns = [
     url(r'^topic_cats$', topic_cats, name='topic_cats'),
     url(r'^post/(?P<blog_id>.+?)$', get_this_post, name='get_this_post'),
     url(r'^admin/', admin.site.urls)
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-]
+
 
 
 
