@@ -2,15 +2,15 @@ import factory
 from blogpost.models.models import *
 from django.contrib.auth.models import *
 
-class TagsFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Tags
-    topic = factory.Faker('name')
+# class TagsFactory(factory.django.DjangoModelFactory):
+#     class Meta:
+#         model = Tags
+#     topic = factory.Faker('name')
 
-class AnimationFactory(factory.django.DjangoModelFactory):
-    class Meta:
-        model = Animation
-    style = factory.Faker('bs')
+# class AnimationFactory(factory.django.DjangoModelFactory):
+#     class Meta:
+#         model = Animation
+#     style = factory.Faker('bs')
 
 
 class ContentFactory(factory.django.DjangoModelFactory):

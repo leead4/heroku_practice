@@ -1,0 +1,136 @@
+
+[
+   {
+      "model":"blogpost.Tags",
+      "pk":1,
+      "fields":{
+         "topic":"Code"
+      }
+   },
+   {
+      "model":"blogpost.Tags",
+      "pk":2,
+      "fields":{
+         "topic":"Design"
+      }
+   },
+   {
+      "model":"blogpost.Tags",
+      "pk":3,
+      "fields":{
+         "topic":"Cats"
+      }
+   },
+   {
+      "model":"blogpost.Content",
+      "pk":1,
+      "fields":{
+         "text":"Not everything that can be counted counts, and not everything that counts can be counted."
+      }
+   },
+   {
+      "model":"blogpost.Content",
+      "pk":2,
+      "fields":{
+         "text":"The artist is nothing without the gift, but the gift is nothing without work."
+      }
+   },
+   {
+      "model":"blogpost.Content",
+      "pk":3,
+      "fields":{
+         "text":"In the End, we will remember not the words of our enemies, but the silence of our friends."
+      }
+   },
+   {
+      "model":"blogpost.Content",
+      "pk":4,
+      "fields":{
+         "text":"The use of COBOL cripples the mind; its teaching should, therefore, be regarded as a criminal offense"
+      }
+   },
+   {
+      "model":"blogpost.Asset",
+      "pk":1,
+      "fields":{
+         "image":""
+      }
+   },
+   {
+      "model":"blogpost.Asset",
+      "pk":2,
+      "fields":{
+         "image":""
+      }
+   },
+   {
+      "model":"blogpost.Asset",
+      "pk":3,
+      "fields":{
+         "image":""
+      }
+   },
+   {
+      "model":"blogpost.Author",
+      "pk":1,
+      "fields":{
+         "name":"Bilbo",
+         "avatar":3
+      }
+   },
+   {
+      "model":"blogpost.Author",
+      "pk":2,
+      "fields":{
+         "name":"Shire",
+         "avatar":1
+      }
+   },
+   {
+      "model":"blogpost.Author",
+      "pk":3,
+      "fields":{
+         "name":"Kevin",
+         "avatar":2
+      }
+   },
+   {
+      "model":"blogpost.Post",
+      "pk":1,
+      "fields":{
+         "content":1,
+         "asset":1, 
+         "title":"Im the first Post",
+         "post_like":10,
+         "date":"2015-03-11",
+         "tags":[1],
+         "post_author":1
+      }
+   },
+   {
+      "model":"blogpost.Post",
+      "pk":2,
+      "fields":{
+         "content":2,
+         "asset":2, 
+         "title":"I'm the second post",
+         "post_like":20,
+         "date":"2016-03-11",
+         "tags": [2],
+         "post_author":2
+      }
+   },
+   {
+      "model":"blogpost.Post",
+      "pk":3,
+      "fields":{
+         "content":3,
+         "asset":3, 
+         "title":"I'm the third post",
+         "post_like":30,
+         "date":"2017-03-11",
+         "tags": [3],
+         "post_author":3
+      }
+   }
+]
