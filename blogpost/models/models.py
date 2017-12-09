@@ -10,7 +10,7 @@ class Tags(models.Model):
         return self.topic
 
 class Asset(models.Model):
-    image = models.ImageField(upload_to='media', blank=True)
+    image = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=100)
 
 class Content(models.Model):
     text = models.CharField(max_length=10000)
