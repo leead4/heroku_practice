@@ -10,23 +10,38 @@
 	{%include "navbar.html"%}
 	<div class="container-fluid main">
 	{%include "sidenav.html"%}
-	{% for blog in blogs %}
-		<div class="row content-holder body_text">
-			<div class="col-md-12">
-				<section class="blank-space"></section>
-				<article class="post asymmetric">
-					<h4><a href="{% url 'get_this_post' blog.id %}">{{blog.title}}</a></h4>
-
-					<!-- <h4>{{blog.text_body}}</h4> -->
-					<h4>{{blog.date}}</h4>
-					<!-- <h4>{{blog.tags.post_topic}}</h4> -->
-					<h4>{{blog.post_author.name}}</h4>
-				</article>
-				<section class="blank-space"></section>
+		{% if topic %}
+		<div class="row content-holder body_text center">
+			<div class="post asymmetric">
+				<H2>{{topic}}</H2>
 			</div>
 		</div>
+		{% endif %}
+		{% if search_box %}
+		<div class="row content-holder body_text center">
+			<div class="post asymmetric">
+				<H2>Results for "{{search_box}}"</H2>
+			</div>
+		</div>
+		{% endif %}
+	{% for blog in blogs %}
+		<div class="row content-holder body_text">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-8">
+				<section class="blank-space"></section>
+					<div class="blog-holder">
+						<div class="post asymmetric">
+							<h4><a href="{% url 'get_this_post' blog.id %}">{{blog.title}}</a></h4>
+							<h4>{{blog.date}}</h4>
+							<h4>{{blog.post_author.name}}</h4>
+						</div>
+					</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
 	{% endfor %}
-	</div>
+		<section class="blank-space"></section>
 	{%include "scripts.html"%}
 </body>
 </html> 

@@ -29,16 +29,12 @@ app_name = 'blog'
 
 urlpatterns = [
     url(r'^$', index, name='index'),
-    url(r'^about$', about, name='about'),
     url(r'^archive$', archive, name='archive'),
     url(r'^search_keyword/$', search_keywords, name='search_keywords'),
     url(r'^popular$', popular, name='popular'),
-    url(r'^tags$', get_tags, name='get_tags'),
     url(r'^blog$', blog, name='blog'),
     url(r'^projects$', projects, name='projects'),
-    url(r'^topic_code$', topic_code, name='topic_code'),
-    url(r'^topic_design$', topic_design, name='topic_design'),
-    url(r'^topic_cats$', topic_cats, name='topic_cats'),
+    url(r'^filter_blog_by_topic/(?P<topic_type>.+?)$', filter_blog_by_topic, name='filter_blog_by_topic'),
     url(r'^post/(?P<blog_id>.+?)$', get_this_post, name='get_this_post'),
     url(r'^admin/', admin.site.urls)
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
