@@ -1,6 +1,7 @@
 body{
 	/*background-color:#EBFCFB;*/
 	padding-top: 70px; 
+  font-family: 'Open Sans', sans-serif;
 }
 
 input[type=text]:focus {
@@ -14,9 +15,16 @@ input[type=text]:focus {
 
 .fa {
   color: rgba(85,239,203,1);
-  color: #fff;
+  /*color: #fff;*/
   font-size: 2.5em;
 }
+
+.panel {
+  padding: 2.5%;
+  box-shadow: 0 0 3px #BFBFBF !important;
+}
+
+
 
 .header{
   color: #247B7B;
@@ -24,7 +32,7 @@ input[type=text]:focus {
 }
 
 .body_text, input[type=text]:focus, .jumbotron h4 {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
   color: #0D5C63 !important;
 
 }
@@ -58,6 +66,7 @@ nav .navbar, .navbar-default, .navbar-fixed-top, .transparent, .navtown, footer 
   border-image: linear-gradient(to bottom, #3acfd5 0%, #26FFCD 100%);
   border-image-slice: 1;
 }
+
 
 /*.item, .active*/
 .asymmetric {
@@ -130,19 +139,11 @@ article.asymmetric p {
   height: 200px;
 }
 
-
-/*carousel styling*/
-.blank-carousel {
-  height: 50px;
+.blog {
+  border-bottom: 2px solid #26FFCD; 
+  height: 30%;
+  margin: 2.5%;
 }
- .item, .active {
-  height: 500px;
-}
-
-ol.carousel-indicators li {
-  background-color: rgba(30,87,153,1) !important;
-} 
-
 
 .center, footer div.row ul li {
   display: flex;
@@ -278,6 +279,10 @@ div.col-md-6.text-center {
   transform: skewY(5deg);
 }
 
+.fa {
+  color: rgba(85,239,203,1);
+
+}
 
 footer div.row ul li {
   float: right;

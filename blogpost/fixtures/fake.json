@@ -1,27 +1,6 @@
 
 [
    {
-      "model":"blogpost.Tags",
-      "pk":1,
-      "fields":{
-         "topic":"Code"
-      }
-   },
-   {
-      "model":"blogpost.Tags",
-      "pk":2,
-      "fields":{
-         "topic":"Design"
-      }
-   },
-   {
-      "model":"blogpost.Tags",
-      "pk":3,
-      "fields":{
-         "topic":"Cats"
-      }
-   },
-   {
       "model":"blogpost.Content",
       "pk":1,
       "fields":{
@@ -103,7 +82,7 @@
          "title":"Im the first Post",
          "post_like":10,
          "date":"2015-03-11",
-         "tags":[1],
+         "tags": "Code",
          "post_author":1
       }
    },
@@ -116,7 +95,7 @@
          "title":"I'm the second post",
          "post_like":20,
          "date":"2016-03-11",
-         "tags": [2],
+         "tags": "Cats",
          "post_author":2
       }
    },
@@ -129,7 +108,7 @@
          "title":"I'm the third post",
          "post_like":30,
          "date":"2017-03-11",
-         "tags": [3],
+         "tags": "Code",
          "post_author":3
          }
        },  
@@ -137,12 +116,12 @@
       "model":"blogpost.Post",
       "pk":4,
       "fields":{
-         "content":3,
-         "asset":4, 
+         "content":4,
+         "asset":3, 
          "title":"I'm the fourth post",
          "post_like":30,
          "date":"2017-03-11",
-         "tags": [3],
+         "tags": "Design",
          "post_author":3
       }
    },
@@ -155,7 +134,7 @@
          "title":"I'm the fifth post",
          "post_like":30,
          "date":"2017-03-11",
-         "tags": [3],
+         "tags": "Cats",
          "post_author":3
       }
    }

@@ -41,7 +41,7 @@ def popular(request):
 
 def filter_blog_by_topic(request, topic_type):
     topic = topic_type
-    blogs = Post.objects.filter(tags__topic = topic)
+    blogs = Post.objects.filter(tags = topic)
     template_name = 'blogs.html'
     return render(request, template_name, {'blogs': blogs, 'topic': topic})
 
