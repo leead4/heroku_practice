@@ -11,21 +11,19 @@
 <div class="container-fluid main">
 	{%include "sidenav.html"%}
 	<div class="row">
-		<div class="row content-holder body_text">
-			<div class="col-md-3"></div>
-				<div class="col-md-6">
-					<h3 class="text-center">{{post.title}}</h3>
-					<div class="flex-container">
-						<h5 class="flex-items">{{post.date}}</h5>
-					</div>
-					<div class="box"></div>
-						<img src="{{post.asset.image.url}}" class="img-responsive image-post">	
-						<h5>{{post.content.text}}</h5>
-					</div> 
-				</div> 
+		<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h3 class="text-center">{{post.title}}</h3>
+				<div class="flex-container">
+					<h5 class="flex-items">{{post.date}}</h5>
+				</div>
+				<div class="box"></div>
+					<img src="{{post.asset.image.url}}" class="img-responsive">	
+					<p class="lead">{{post.content.text}}</p>
 			</div>
-		</div>
-<section class="blank-space"></section>
+		<div class="col-md-2"></div>
+		</div> 
+	</div>
 	{%include "scripts.html"%}
 </body>
 </html>

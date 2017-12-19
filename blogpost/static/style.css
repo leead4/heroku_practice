@@ -1,5 +1,4 @@
 body{
-	/*background-color:#EBFCFB;*/
 	padding-top: 70px; 
   font-family: 'Open Sans', sans-serif;
 }
@@ -9,39 +8,55 @@ input[type=text]:focus {
   box-shadow: rgba(30,87,153,1);
 }
 
+
+
 .input_style{
   border: 3px solid #26FFCD; 
 }
 
 .fa {
   color: rgba(85,239,203,1);
-  /*color: #fff;*/
+  color: #55FFFF;
   font-size: 2.5em;
 }
 
+
+.post {
+  display: block;
+  padding: 5%;
+  color: #fff;
+}
+
 .panel {
+  border: 3px;
   padding: 2.5%;
-  box-shadow: 0 0 3px #BFBFBF !important;
 }
 
-
-
-.header{
-  color: #247B7B;
-  font-size: 10em;
+.panel-body {
+  background-color: #fff;
+  color: #6c8bfa;
+  border-left: solid 10px #FED3D0;
 }
 
-.body_text, input[type=text]:focus, .jumbotron h4 {
-  font-family: 'Open Sans', sans-serif !important;
-  color: #0D5C63 !important;
+.panel-head {
+  font-size: 10em !important;
+  font-style: underline;
+  font-family: 'Open Sans', sans-serif;
+}
+.panel-head > h5 {
+  padding: 2.5%;
+  color: #FFF !important;
 
 }
 
-
-.item, .active {
-  height: 500px;
+.panel-head > h1  > a {
+  padding: 2.5%;
+  color: #FFF !important;
 }
 
+.panel-head > h1 > a:hover {
+  color: #FED3D0 !important;
+}
 
 
 /*navabar styling*/
@@ -59,13 +74,17 @@ nav .navbar, .navbar-default, .navbar-fixed-top, .transparent, .navtown, footer 
   color:#26FFCD !important;
 }
 
-.nav {
+.nav, .jumbotron {
   border: 3px solid transparent;
   -moz-border-image: -moz-linear-gradient(top, #3acfd5 0%, #26FFCD 100%);
   -webkit-border-image: -webkit-linear-gradient(top, #3acfd5 0%, #26FFCD 100%);
   border-image: linear-gradient(to bottom, #3acfd5 0%, #26FFCD 100%);
   border-image-slice: 1;
 }
+
+
+
+
 
 
 /*.item, .active*/
@@ -134,37 +153,16 @@ article.asymmetric p {
  padding: 5%;
 }
 
-
 .blank-space {
   height: 200px;
 }
 
-.blog {
-  border-bottom: 2px solid #26FFCD; 
-  height: 30%;
-  margin: 2.5%;
-}
 
 .center, footer div.row ul li {
   display: flex;
   text-align: center;
   justify-content: space-between;
 }
-
-div.col-md-6.text-center {
-  color: #fff;
-  background-color: #ACFCEA;
-}
-
-
-.jumbotron {
-  background-color: rgba(85,239,203,1)!important; 
-  color: #fff !important;
-}
-.jumbotron h4 {
-    font-size: 10em !important;
-}
-
 
 
 /* The side navigation menu */
@@ -190,14 +188,14 @@ div.col-md-6.text-center {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #6c8bfa;
     display: block;
     transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #f4c048;
 }
 
 /* Position and style the close button (top right corner) */
@@ -221,6 +219,13 @@ div.col-md-6.text-center {
     .sidenav a {font-size: 18px;}
 }
 
+
+
+.lead {
+  text-align: justify;
+  margin-top: 5%;
+}
+
 .flex-items {
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -232,65 +237,32 @@ div.col-md-6.text-center {
   align-content: space-between;
 }
 
-.post-list{
-  margin-left: 2.5%; 
-  margin-right: 2.5%;
-  padding: 2.5%;
-  height: 200px;
+.pretty, .panel,.asymmetric,.asymmetric::before,
+.asymmetric::after {
+  /*opacity: .5;*/
+  background: linear-gradient(140deg, #4ce1bb, #6c8bfa, #f4c048);
+  background-size: 600% 600%;
+
+-webkit-animation: AnimationName 30s ease infinite;
+-moz-animation: AnimationName 30s ease infinite;
+animation: AnimationName 30s ease infinite;
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
 }
 
-.post-list::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 50%;
-  top: 0;
-  left: 0;
-  background-color: rgba(85,239,203,1);
-  transform-origin: top right;
-  transform: skewY(-5deg);
-  z-index: -10;
-}
-
-/*.item, .active*/
-.post-list::after  {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 50%;
-  top: 0;
-  left: 0;
-  background-color: rgba(85,239,203,1);
-  transform-origin: bottom right;
-  transform: skewY(3deg);
-  z-index: -10;
-}
-
-.post {
-  padding: 2.5%;
-}
-
-.odd::before {
-  transform-origin: top left;
-  transform: skewY(-10deg);
-}
-.odd::after {
-  transform-origin: bottom left;
-  transform: skewY(5deg);
-}
-
-.fa {
-  color: rgba(85,239,203,1);
-
-}
-
-footer div.row ul li {
-  float: right;
-  background-color: rgba(0,0,0,0); 
-  height: 60px;
-  border-bottom: 0px;
-  text-align: center;
-  transition: background-color .5s ease 0s;
-}  
 
 
