@@ -5,29 +5,25 @@
 	<meta charset="utf-8">
 	{%include "styles.html"%}
 	<title>Blogazon</title>
-	<i class="fa fa-code" aria-hidden="true"></i>
 </head>
 <body>
 {%include "navbar.html"%}
 <div class="container-fluid main">
 	{%include "sidenav.html"%}
 	<div class="row">
-		<div class="row content-holder body_text">
-							<div class="col-md-12">
-								<section class="blank-space"></section>
-								<article class="post asymmetric">
-								<img src="assets/{{post.asset.image}}">	
-									<h3>{{post.title}}</h3>
-									<h5>{{post.content.text}}</h5>
-									<h5>{{post.date}}</h5>
-									<h4>{{post.tags.topic}}</h4>
-									<h4>{{post.post_author.name}}</h4>
-								</article>
-								<section class="blank-space"></section>
-							</div>
-						</div>
+		<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h3 class="text-center">{{post.title}}</h3>
+				<div class="flex-container">
+					<h5 class="flex-items">{{post.date}}</h5>
+				</div>
+				<div class="box"></div>
+					<img src="{{post.asset.image.url}}" class="img-responsive">	
+					<p class="lead">{{post.content.text}}</p>
+			</div>
+		<div class="col-md-2"></div>
+		</div> 
 	</div>
-</div>
 	{%include "scripts.html"%}
 </body>
 </html>

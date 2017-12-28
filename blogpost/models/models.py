@@ -10,7 +10,7 @@ class Tags(models.Model):
         return self.topic
 
 class Asset(models.Model):
-    image = models.ImageField(upload_to='media', blank=True)
+    image = models.ImageField(upload_to='media', height_field=None, width_field=None, max_length=100)
 
 class Content(models.Model):
     text = models.CharField(max_length=10000)
@@ -25,14 +25,18 @@ class Author(models.Model):
     def __str__(self):
         return self.name
     
-
 class Post(models.Model):
+    Cats = 'Cats'
+    Code = 'Code'
+    Design = 'Design'
+    choices = ((Cats, "Cats"), (Code, "Code"), (Design, "Design"))
+
     content = models.ForeignKey(Content)
     asset = models.ForeignKey(Asset)
     title = models.CharField(max_length=255)
     post_like = models.IntegerField()
     date = models.DateField()
-    tags = models.ManyToManyField(Tags)
+    tags = models.CharField(max_length=2,choices=choices,default=Code,)
     post_author = models.ForeignKey(Author)
 
     def __str__(self):

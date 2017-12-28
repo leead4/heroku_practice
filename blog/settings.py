@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'favicon',
     'blogpost'
 ]
 
@@ -118,9 +119,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+ENV_PATH = os.path.abspath(os.path.dirname(__file__))
+
 STATIC_URL = '/static/'
 
-MEDIA_URL = 'http://127.0.0.1:8000/media/'
+# STATIC_ROOT = ''
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+
+MEDIA_ROOT = os.path.join(ENV_PATH, 'media/')
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

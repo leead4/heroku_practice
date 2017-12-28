@@ -3,30 +3,48 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Blogazon</title>
 	{%include "styles.html"%}
 </head>
 <body>
 	{%include "navbar.html"%}
 	<div class="container-fluid main">
 	{%include "sidenav.html"%}
-	{% for blog in blogs %}
-		<div class="row content-holder body_text">
-			<div class="col-md-12">
-				<section class="blank-space"></section>
-				<article class="post asymmetric">
-					<h4><a href="{% url 'get_this_post' blog.id %}">{{blog.title}}</a></h4>
-
-					<!-- <h4>{{blog.text_body}}</h4> -->
-					<h4>{{blog.date}}</h4>
-					<!-- <h4>{{blog.tags.post_topic}}</h4> -->
-					<h4>{{blog.post_author.name}}</h4>
-				</article>
-				<section class="blank-space"></section>
+		{% if topic %}
+		<div class="row center">
+			<div class="post asymmetric">
+				<H2>{{topic}}</H2>
 			</div>
 		</div>
+		<section class="blank-space"></section>
+		{% endif %}
+		{% if search_box %}
+		<div class="row center">
+			<div class="post asymmetric">
+				<H2>Results for "{{search_box}}"</H2>
+			</div>
+		</div>
+		<section class="blank-space"></section>
+		{% endif %}
+	{% for blog in blogs %}
+		<div class="row body_text">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-8">
+				<div class="panel">
+					<div class="panel-head">
+						<h1><a href="{% url 'get_this_post' blog.id %}">{{blog.title}}</a></h1>
+						<h5>{{blog.date}}</h5>
+					</div>
+					<div class="lead panel-body">
+						<p>{{blog.content|truncatewords:25}}</p>
+							
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
 	{% endfor %}
-	</div>
+		<section class="blank-space"></section>
 	{%include "scripts.html"%}
 </body>
 </html> 
