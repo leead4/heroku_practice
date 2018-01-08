@@ -36,7 +36,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     post_like = models.IntegerField()
     date = models.DateField()
-    tags = models.CharField(max_length=2,choices=choices,default=Code,)
+    tags = models.CharField(max_length=15,choices=choices,default=Code,)
     post_author = models.ForeignKey(Author)
 
     def __str__(self):
