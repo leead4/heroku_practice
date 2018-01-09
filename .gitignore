@@ -7,3 +7,7 @@ bin
 obj
 *.sqlite3
 */migrations/
+venv
+*.pyc
+staticfiles
+.env
